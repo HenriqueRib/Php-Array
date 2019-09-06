@@ -1,17 +1,27 @@
-<?php
+<?php declare(strict_types=1);
 
-require 'Calculadora.php' ;
+//namespace henrique;
+
+require 'autoload.php';
+
+            //Clases
+//require 'Calculadora.php';
+//require 'VetorUtils.php';
+
+            //Funçoes
+require 'function.php';
+
+            //Variaveis
 
 $nota = [9 , 10 , 3 , 5 , 7] ;
+//$saldos = [2500, 3000, 4400, 1000, 8700, 9000];
+//$nomes = "Giovana,João,Maria,Pedro";
+$correntistas_e_compras = ["Giovanni", "João", 12, "Maria", 25, "Luis", "Luisa", "12",];
 
-echo '<br> <br> <br> <br> <br> <br> <h1>' ;
-echo "A nota de Portugues é $nota[0] " . '<hr>' ;
-echo "A nota de Matematica é $nota[1] " . '<hr>'  ;
-echo "A nota de Geografia é $nota[2] " . '<hr>' ;
-echo "A nota de Historia é $nota[3] " . '<hr>' ;
-echo "A nota de Quimica é $nota[4] " . '<hr>' ;
-echo '</h1>' ;
+            //Chamada de funções
 
-$calculadora = new Calculadora();
-$calculadora->calculaMedia($nota);
+echo notasEscola($nota);
+//echo ordenarSaldos($saldos);
+//echo imprimeNomes($nomes);
+echo removendoArray ($correntistas_e_compras);
 
